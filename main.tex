@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\input{preamble}
+
+\title{Introduction}
+\author{Szymon Hyziak}
+\date{November 2022}
+
+\begin{document}
+
+\maketitle
+\pagenumbering{arabic}
+\tableofcontents
+
+\begin{abstract}
+    Abstract goes here\ldots
+\end{abstract}
+
+\section{Introduction}
+
+The rain in Spain falls \emph{mainly} on the plain
+
+\section{Lists}
+
+\subsection{Unordered list}
+
+\begin{itemize}
+    \item Tea
+    \item Milk
+    \item Biscuits
+\end{itemize}
+
+\subsection{Ordered list}
+
+\begin{enumerate}
+    \item Tea
+    \item Milk
+    \item Biscuit
+\end{enumerate}
+
+\section{Graphics} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/the_latex_project.png}
+    \caption{\label{}The LaTeX Project}
+\end{figure}
+
+\section{Equations}
+
+\begin{equation}
+    \alpha + \beta + 1
+\end{equation}
+
+\section{Attitude adjustment}
+
+\begin{itemize}
+    \item Use commands to describe \emph{what it is}, not \emph{how it looks}.
+    \item Focus on your content.
+\end{itemize}
+
+\section{Typesetting Exercise I}
+
+In March 2006, Congress raised that ceiling an additional \$0.79 trillion to \$8.97 trillion, which is approximately 68\% of GDP. As of October 4, 2008, the `Emergency Economic Stabilization Act of 2008' raised the current debt ceiling to \$11.3 trillion.
+
+\section{Typesetting Mathematics}
+
+\subsection{We use \$ to mark mathematics in text}
+
+Let $a$ and $b$ be distinct positive integers and let $c = a + b - 1$.
+
+\subsection{Use caret for superscripts and underscore for subscripts} 
+
+$y = c_2 x^2 + c_1 + c_0$
+
+\subsection{Use curly braces to group superscripts and subscripts}
+
+$F_n = F_{n-1} + F_{n-2}$
+
+\subsection{There are commands for Greek letters and common notation}
+
+$\Omega = \sum_{k=1}^{n} \omega_k$
+
+\subsection{Displaying equations}
+
+The roots of quadratic equation are given by
+\begin{equation}
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+\section{Environment}
+
+A command can produce different output in different contexts. We can write $\Omega = \sum_{k=1}^{n} \omega_k$ in text, or we can write
+\begin{equation}
+    \Omega = \sum_{k=1}^{n} \omega_k
+\end{equation}
+to display it.
+
+\section{Examples with amsmath}
+
+\subsection{Use \emph{equation*} for unnumbered equations}
+
+\begin{equation*}
+    \Omega = \sum_{k=1}^{n} \omega_k
+\end{equation*}
+
+\subsection{LaTeX treats adjacent letters as variables multiplied together, which is not always what you want}
+
+\emph{amsmath} defines commands for many common mathematical operators.
+\begin{equation*} 
+    \min_{x,y}{(1-x)^2 + 100(y-x^2)^2}
+\end{equation*}
+
+\subsection{Align a sequence of equations at the equals sign with the \emph{align*} environment}
+
+\begin{align*}
+    (x+1)^3 &= (x+1)(x+1)(x+1)      \\
+            &= (x+1)(x^2 + 2x + 1)  \\
+            &= x^3 + 3x^2 + 3x + 1
+\end{align*}
+
+\section{Typesetting Exercise 2}
+
+Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$ be a sequence of independent and identically distributed random variableswith $E[X_i] = \mu$ and $\operatorname{Var}[X_i] = \delta^2 < \infty$, and let
+\begin{equation}
+    S_n = \frac{1}{n}\sum_{i=1}^{n}X_i
+\end{equation}
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $N(0,\delta^2)$.
+
+\section{Tables}
+
+The argument specifies column alignment - left, right, right.
+
+\subsection{Blank table}
+
+\begin{align}
+    \begin{tabular}{lrr}
+        Item    & Qty   & Unit \$   \\
+        Widget  & 1     & 199.99    \\
+        Gadget  & 2     & 399.99    \\
+        Cable   & 3     & 19.99     \\
+    \end{tabular}
+\end{align}
+
+\subsection{Outlined table}
+
+\begin{align}
+    \begin{tabular}{|l|r|r|} 
+        \hline
+        Item    & Qty   & Unit \$   \\
+        \hline
+        Widget  & 1     & 199.99    \\
+        Gadget  & 2     & 399.99    \\
+        Cable   & 3     & 19.99     \\
+        \hline
+    \end{tabular}
+\end{align}
+
+\end{document}
